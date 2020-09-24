@@ -1,0 +1,15 @@
+@model NewPokemon.Dao.PokemonDbContext
+
+<h1>All Pokemon</h1>
+
+<div class = "row row-cols-1 row-cols-md-3">
+
+@foreach (PokemonModel pkmn in @Model.pokemon)
+{
+    <partial name = "_view" model = "@pkmn"/>
+    <a asp-controller = "Pokemon" asp-action = "ViewDetails" asp-route-pkmnID = "@pkmn.id">
+        <button id="btnSpace" class="btn btn-outline-light" id="btnColor">Details</button>
+    </a>
+}
+
+</div>

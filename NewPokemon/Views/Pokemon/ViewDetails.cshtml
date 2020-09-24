@@ -1,0 +1,9 @@
+@model NewPokemon.Models.PokemonModel
+
+<h1>@Model.name</h1>
+
+<partial name = "_view" model = "@Model"/>
+
+<a asp-asp-controller = "Pokemon" asp-action = "Index">
+    <button class="btn btn-outline-light" id="btnColor">Return</button>
+</a>
